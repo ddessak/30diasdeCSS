@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #589cf5;
+  }
+
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .wave-1 {
+    animation: moveWave1 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave1 {
+    from {
+      transform: translateX(-2000px);
+    }
+  }
+
+  .wave-2 {
+    animation: moveWave2 4s 1.2s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave2 {
+    from {
+      transform: translateX(-1800px);
+    }
+  }
+
+  .wave-3 {
+    animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave3 {
+    from {
+      transform: translateX(-1600px);
+    }
+  }
