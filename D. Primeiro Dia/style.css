@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.carregando{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 15px solid #080557;
+    animation: um 2s linear infinite;
+}
+
+
+.carregando:before, 
+.carregando:after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.carregando:before{
+    border-top: 15px solid #e3c609;
+    transform: rotate(120deg);
+}
+.carregando:after{
+    border-top: 15px solid #590061;
+    transform: rotate(240deg);
+}
+
+.carregando span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: #590061;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+    animation: dois 2s linear infinite;
+}
+
+@keyframes um{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dois{
+    to{
+        transform: rotate(-360deg);
+    }
+}
