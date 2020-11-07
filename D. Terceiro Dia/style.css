@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #eae8ff;
+  }
+  .alinhamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 450px;
+    height: 450px; 
+  }
+  
+  .pendulo {
+    width: 400px;
+    height: 8px;
+    background: #1c14a8;
+    border-radius: 2px;
+  }
+  
+  .bolas {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .bola {
+    display: inline-block;
+    height: 260px;
+    width: 3px;
+    border-radius: 2px;
+    background:#1c14a8;
+    position: relative;
+    transform-origin: top;
+    
+  }
+  
+  .bola::before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    background: #07043b;
+    border-radius: 100%;
+    top: 100%;
+    left: -32px;
+  }
+  
+  .bola:first-child {
+    animation: pendulo1 1s linear infinite;
+    transform-origin: top;
+  }
+  
+  .bola:last-child {
+    animation: pendulo2 1s linear infinite;
+    transform-origin: top;
+    animation-delay: .5s;
+  }
+  
+  @keyframes pendulo1 {
+    0% , 50% , 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(50deg)
+    }
+  }
+  
+  @keyframes pendulo2 {
+    0% , 50% , 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-50deg)
+    }
+  } 
