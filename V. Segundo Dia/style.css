@@ -1,0 +1,56 @@
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+}
+
+section{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(
+        124deg, 
+        #24ecf0,
+        #2dadf7, 
+        #082d54,
+        #080c54, 
+        #200854, 
+        #330759,
+        #59047d, 
+        #9d02b5,
+        #dd00f3);
+    background-size: 1800% 1800%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+span{
+    font-size:50px;
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255,255,255,0.7);
+    text-shadow: 5px 5px rgba(255,255,255,0.2);
+}
+
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+
+
+}
+ 
